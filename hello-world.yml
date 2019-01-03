@@ -1,0 +1,7 @@
+---
+- hosts: ubuntu
+  tasks:
+  - name: Create hello file in /tmp
+    file:
+      name: /tmp/hello
+      state: touch
