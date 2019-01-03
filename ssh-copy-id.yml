@@ -1,0 +1,9 @@
+- name: Playbook -- configure passwordless ssh authentication on a remote machine
+  hosts: ubuntu
+  connection: local
+
+  roles:
+    - role: ansible-ssh-copy-id
+      vars:
+        ssh_public_key: /Users/kokou028666/.ssh/id_rsa.pub
+        host_group:  "ubuntu"
